@@ -1,0 +1,102 @@
+{
+  // Note this JSON file contains comments and is technically invalid.
+  // Stem will strip comments from this config before parsing.
+
+  // Namespace for the theme
+  "namespace": "\\StemeTheme\\Base",
+
+  // Text domain
+  "text-domain": "stem-theme-base",
+
+  "options": {
+    // Turns on relative permalinks
+    "relative-links": true,
+    // Forces any absolute urls in the output to this
+    "force-domain": null, // "https://yoursite.com"
+    // Configure the view engine
+    "views": {
+      // Which engine to use, either "twig" or "internal"
+      "engine": "twig",
+
+      // directory within your theme to cache views
+      "cache": "cache/views"
+    }
+  },
+
+  // Scripts and CSS to enqueue
+  "enqueue": {
+    "use-manifest": false,
+    "manifest": "assets/manifest.json",
+    // list the js files you want to enqueue
+    "js": [
+    ],
+    // list the css files you want to enqueue
+    "css": [
+    ]
+  },
+
+  // WordPress theme options
+  "support":{
+    "automatic-feed-links": true,
+    "title-tag": true,
+    "post-thumbnails":{
+      "width": 288,
+      "height": 323,
+      "crop": true
+    },
+    "html5":[
+      "search-form",
+      "comment-form",
+      "comment-list",
+      "gallery",
+      "caption"
+    ]
+  },
+
+  // Clean up generated HTML options
+  "clean": {
+    // Removes the following text from the final output
+    "remove": [
+    ],
+
+    // Unsets these actions
+    "wp_head":[
+      "rsd_link",
+      "wlwmanifest_link",
+      "wp_generator",
+      "start_post_rel_link",
+      "index_rel_link",
+      "parent_post_rel_link",
+      "adjacent_posts_rel_link_wp_head",
+      "wp_shortlink_wp_head"
+    ],
+
+    // Removes these headers
+    "headers":[
+      "X-Pingback"
+    ]
+  },
+
+  // search options
+  "search-options":{
+    // Post types to include in search
+    "post-types":[
+      "post"
+    ]
+  },
+
+  // Menu options
+  "menu": {
+    "primary": "Primary",
+    "footer": "Footer",
+    "social": "Social"
+  },
+
+  // Page Controllers
+  "page-controllers": {
+  },
+
+  // Custom post types to model map
+  "model-map": {
+  }
+}
