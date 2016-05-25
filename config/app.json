@@ -12,14 +12,85 @@
     // Turns on relative permalinks
     "relative-links": true,
     // Forces any absolute urls in the output to this
-    "force-domain": null, // "https://yoursite.com"
+    "force-domain": false,
     // Configure the view engine
     "views": {
       // Which engine to use, either "twig" or "internal"
-      "engine": "twig",
+      "engine": "blade",
 
       // directory within your theme to cache views
       "cache": "cache/views"
+    }
+  },
+
+  // Configuration for logging
+  "logging": {
+
+    // For development environment
+    "development": {
+
+      // For debug AND GREATER error levels
+      "debug": {
+        // error_log()
+        "phperror": {
+          "format": {
+            "output": "%level_name% > %message% %context%",
+            "date": ""
+          }
+        },
+
+        // console.log()
+        "browser": {
+        },
+
+        // syslog
+        "syslog": {
+          "ident": "stem"
+        }
+      }
+    },
+
+    // For production environment
+    "production": {
+      // For error AND GREATER error levels
+      "error": {
+        // error_log()
+        "phperror": {},
+
+        // syslog via UDP
+        "syslog_udp": {
+          "host": "xx.papertrailapp.com",
+          "port": "514"
+        },
+
+        // slack
+        "slack": {
+          "token" : "XXXXX",
+          "channel": "mychannel",
+          "username": "Stem",
+          "useAttachment": true,
+          "iconEmoji": false,
+
+          // Every logger allows you to specify the format
+          "format": {
+            // This is required
+            "output": "%datetime% > %level_name% > %message% %context% %extra%\n",
+            // Optional
+            "date": "Y n j, g:i a",
+            // Optional, default is false
+            "line-breaks" : true
+          }
+        }
+      },
+
+      // for emergency error levels
+      "emergency": {
+        "mail": {
+          "to": "jon@interfacelab.com",
+          "from": "donotreply@interfacelab.com",
+          "subject": "Emergency on production"
+        }
+      }
     }
   },
 
@@ -55,9 +126,21 @@
 
   // Clean up generated HTML options
   "clean": {
-    // Removes the following text from the final output
-    "remove": [
-    ],
+    // Removes the following text and regexes from the final output
+    "remove": {
+      "text": [
+      ],
+      "regex": [
+      ]
+    },
+
+    // Replaces the following text and regexes from the final output
+    "replace": {
+      "text": {
+      },
+      "regex": {
+      }
+    },
 
     // Unsets these actions
     "wp_head":[
@@ -93,7 +176,7 @@
   },
 
   // Page Controllers
-  "page-controllers": {
+  "controllers": {
   },
 
   // Custom post types to model map
