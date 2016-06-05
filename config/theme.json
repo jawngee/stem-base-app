@@ -1,0 +1,150 @@
+{
+  // This config controls theme specific options such as menus, widgets, customizer stuff, etc.
+
+  // Menu options
+  "menu": {
+    "primary": "Primary",
+    "footer": "Footer",
+    "social": "Social"
+  },
+
+  // Widget Areas
+  "sidebars": {
+    "sidebar-1": {
+      "name": "Sidebar",
+      "description": "Add widgets here to appear in your sidebar.",
+      "before_widget": "<section id=\"%1$s\" class=\"widget %2$s\">",
+      "after_widget": "</section>",
+      "before_title": "<h2 class=\"widget-title\">",
+      "after_title": "</h2>"
+    },
+    "sidebar-2": {
+      "name": "Content Bottom 1",
+      "description": "Appears at the bottom of the content on posts and pages.",
+      "before_widget": "<section id=\"%1$s\" class=\"widget %2$s\">",
+      "after_widget": "</section>",
+      "before_title": "<h2 class=\"widget-title\">",
+      "after_title": "</h2>"
+    },
+    "sidebar-3": {
+      "name": "Content Bottom 1",
+      "description": "Appears at the bottom of the content on posts and pages.",
+      "before_widget": "<section id=\"%1$s\" class=\"widget %2$s\">",
+      "after_widget": "</section>",
+      "before_title": "<h2 class=\"widget-title\">",
+      "after_title": "</h2>"
+    }
+  },
+
+  // Customizer Panels
+  "panels": {
+    "stem-base-options": {
+      "title": "Theme Options",
+      "priority": 100
+    }
+  },
+
+  // Customizer sections
+  "sections": {
+    "stem-base-colors": {
+      "title": "Colors",
+      "panel": "stem-base-options",
+      "priority": 100
+    },
+    "stem-base-images": {
+      "title": "Images",
+      "panel": "stem-base-options",
+      "priority": 100
+    },
+    "stem-base-misc": {
+      "title": "Misc.",
+      "panel": "stem-base-options",
+      "priority": 100
+    }
+  },
+
+  // Theme settings
+  "settings": {
+    "text_setting": {
+      "default": "Hello World",
+      "control": {
+        "label": "Text Setting",
+        "description": "Description",
+        "section": "stem-base-misc",
+        "type": "text"
+      }
+    },
+    "cropped_image_setting": {
+      "default": null,
+      "control": {
+        "label": "Cropped Image Setting",
+        "section": "stem-base-misc",
+        "type": "cropped_image"
+      }
+    },
+    "media_setting": {
+      "default": null,
+      "control": {
+        "label": "Media Setting",
+        "section": "stem-base-misc",
+        "type": "media"
+      }
+    },
+    "border_color": {
+      "default": "#000000",
+      "control": {
+        "label": "Border Color",
+        "section": "stem-base-colors",
+        "type": "color"
+      }
+    },
+    "background_color": {
+      "default": "#FFFFFF",
+      "control": {
+        "label": "Background Color",
+        "section": "stem-base-colors",
+        "type": "color"
+      }
+    },
+    "text_color": {
+      "default": "#000000",
+      "control": {
+        "label": "Text Color",
+        "section": "stem-base-colors",
+        "type": "color"
+      }
+    },
+    "header_color": {
+      "default": "#000000",
+      "control": {
+        "label": "Header Color",
+        "section": "stem-base-colors",
+        "type": "color"
+      }
+    },
+    "link_color": {
+      "default": "#1565c0",
+      "control": {
+        "label": "Anchor Color",
+        "section": "stem-base-colors",
+        "type": "color"
+      }
+    },
+    "header_image": {
+      "default": null,
+      "control": {
+        "label": "Header Image",
+        "section": "stem-base-images",
+        "type": "cropped_image"
+      }
+    },
+    "background_image": {
+      "default": null,
+      "control": {
+        "label": "Background Image",
+        "section": "stem-base-images",
+        "type": "image"
+      }
+    }
+  }
+}

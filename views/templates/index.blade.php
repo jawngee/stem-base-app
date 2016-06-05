@@ -1,5 +1,12 @@
 @extends('layouts/page')
 
 @section('main')
-<h1>Hello World</h1>
+
+@foreach($posts as $post)
+    @include('partials/post-excerpt')
+@endforeach
+
+{{$currentPage}} of {{ $totalPosts }}
+{{  count($posts) }}
+
 @endsection

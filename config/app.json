@@ -15,7 +15,7 @@
     "force-domain": false,
     // Configure the view engine
     "views": {
-      // Which engine to use, either "twig" or "internal"
+      // Which engine to use, either "twig" or "blade"
       "engine": "blade",
 
       // directory within your theme to cache views
@@ -100,9 +100,11 @@
     "manifest": "assets/manifest.json",
     // list the js files you want to enqueue
     "js": [
+      "main.js"
     ],
     // list the css files you want to enqueue
     "css": [
+      "main.css"
     ]
   },
 
@@ -166,13 +168,6 @@
     "post-types":[
       "post"
     ]
-  },
-
-  // Menu options
-  "menu": {
-    "primary": "Primary",
-    "footer": "Footer",
-    "social": "Social"
   },
 
   // Page Controllers

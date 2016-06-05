@@ -1,5 +1,12 @@
-{% extends "layouts/page.html.twig" %}
+{% extends('layouts/page.html.twig') %}
 
 {% block main %}
-<h1>Hello World</h1>
+
+{% for post in posts %}
+    {% include "partials/post-excerpt.html.twig" %}
+{% endfor %}
+
+{{ currentPage }} of {{ totalPosts }}
+{{ posts | length }}
+
 {% endblock %}

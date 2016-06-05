@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "main.js": {
+      "files": [
+        "js/main.js"
+      ],
+      "main": true
+    },
+    "main.css": {
+      "files": [
+        "css/main.scss"
+      ],
+      "main": true
+    }
+  },
+  "paths": {
+    "source": "",
+    "dist": "../"
+  },
+  "config": {
+    "devUrl": "http://dev.interfacelab.io"
+  }
+}
