@@ -9,7 +9,7 @@
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
 
-        {!! $context->header() !!}
+        {!! $context->ui->header() !!}
 
         @yield('header')
         <style>
@@ -60,7 +60,7 @@
             </div>
 
             <nav>
-                {!! $context->menu('primary',false,false,'nav-gap')  !!}
+                {!! $context->ui->menu('primary',false,false,'nav-gap')  !!}
             </nav>
         </header>
 
@@ -76,13 +76,13 @@
         </div>
 
 
-        {!! $context->footer() !!}
+        {!! $context->ui->footer() !!}
 
         @yield('scripts')
 
         <footer>
             <nav>
-                {!! $context->menu('footer',false,false,'nav-gap') !!}
+                {!! $context->ui->menu('footer',false,false,'nav-gap') !!}
             </nav>
         </footer>
     </body>

@@ -9,19 +9,33 @@
   "text-domain": "stem-theme-base",
 
   "options": {
-    // Turns on relative permalinks
-    "relative-links": true,
-    // Forces any absolute urls in the output to this
-    "force-domain": false,
-    // Configure the view engine
-    "views": {
-      // Which engine to use, either "twig" or "blade"
-      "engine": "blade",
+    // Disables XML-RPC
+    "disable-xml-rpc": true,
 
-      // directory within your theme to cache views
-      "cache": "cache/views"
-    }
+    // Disables WordPress's JSON API
+    "disable-wp-json-api": true,
+
+    // Disables WordPress's dumb emoji nonsense
+    "disable-emoji": true,
+
+    // Disable RSS
+    "disable-rss": false,
+
+    // Flush rewrites everytime the site is deployed.  This option requires that you set "stem-new-deploy" option to
+    // true with WP-Cli in your deploy scripts (ansible).  If this is set to true, Stem will flush the rewrite cache
+    // on the next page load
+    "flush-on-deploy": true
   },
+
+  // List of WordPress plugins this theme requires or recommends
+  // For options, view the docs at http://tgmpluginactivation.com/configuration/
+  "plugins": [
+    {
+      "name": "Shortcake",
+      "slug": "shortcode-ui",
+      "required": false
+    }
+  ],
 
   // Configuration for logging
   "logging": {
@@ -94,72 +108,8 @@
     }
   },
 
-  // Scripts and CSS to enqueue
-  "enqueue": {
-    "use-manifest": false,
-    "manifest": "assets/manifest.json",
-    // list the js files you want to enqueue
-    "js": [
-      "main.js"
-    ],
-    // list the css files you want to enqueue
-    "css": [
-      "main.css"
-    ]
-  },
+  "mail": {
 
-  // WordPress theme options
-  "support":{
-    "automatic-feed-links": true,
-    "title-tag": true,
-    "post-thumbnails":{
-      "width": 288,
-      "height": 323,
-      "crop": true
-    },
-    "html5":[
-      "search-form",
-      "comment-form",
-      "comment-list",
-      "gallery",
-      "caption"
-    ]
-  },
-
-  // Clean up generated HTML options
-  "clean": {
-    // Removes the following text and regexes from the final output
-    "remove": {
-      "text": [
-      ],
-      "regex": [
-      ]
-    },
-
-    // Replaces the following text and regexes from the final output
-    "replace": {
-      "text": {
-      },
-      "regex": {
-      }
-    },
-
-    // Unsets these actions
-    "wp_head":[
-      "rsd_link",
-      "wlwmanifest_link",
-      "wp_generator",
-      "start_post_rel_link",
-      "index_rel_link",
-      "parent_post_rel_link",
-      "adjacent_posts_rel_link_wp_head",
-      "wp_shortlink_wp_head"
-    ],
-
-    // Removes these headers
-    "headers":[
-      "X-Pingback"
-    ]
   },
 
   // search options
@@ -167,7 +117,8 @@
     // Post types to include in search
     "post-types":[
       "post"
-    ]
+    ],
+    "search_tags": true
   },
 
   // Page Controllers

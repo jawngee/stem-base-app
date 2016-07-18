@@ -1,5 +1,89 @@
 {
-  // This config controls theme specific options such as menus, widgets, customizer stuff, etc.
+  "options": {
+    // Turns on relative permalinks
+    "relative-links": true,
+    // Forces any absolute urls in the output to this
+    "force-domain": false,
+    // Configure the view engine
+    "views": {
+      // Which engine to use, either "twig" or "blade"
+      "engine": "blade",
+
+      // directory within your theme to cache views
+      "cache": "cache/views"
+    }
+  },
+
+  // Scripts and CSS to enqueue
+  "enqueue": {
+    "use-manifest": false,
+    "manifest": "assets/manifest.json",
+    // list the js files you want to enqueue
+    "js": [
+      "main.js"
+    ],
+    // list the css files you want to enqueue
+    "css": [
+      "main.css"
+    ]
+  },
+
+  // WordPress theme options
+  "support":{
+    "automatic-feed-links": true,
+    "title-tag": true,
+    "post-thumbnails":{
+      "width": 288,
+      "height": 323,
+      "crop": true
+    },
+    "html5":[
+      "search-form",
+      "comment-form",
+      "comment-list",
+      "gallery",
+      "caption"
+    ]
+  },
+
+  // Clean up generated HTML options
+  "clean": {
+    // Removes the following text and regexes from the final output
+    "remove": {
+      "text": [
+        "<!-- /all in one seo pack -->"
+      ],
+      "regex": [
+        "#<!-- All in One (.*) -->#",
+        "#<!-- (.*)The Seo Framework(.*) -->#"
+      ]
+    },
+
+    // Replaces the following text and regexes from the final output
+    "replace": {
+      "text": {
+      },
+      "regex": {
+      }
+    },
+
+    // Unsets these actions
+    "wp_head":[
+      "rsd_link",
+      "wlwmanifest_link",
+      "wp_generator",
+      "start_post_rel_link",
+      "index_rel_link",
+      "parent_post_rel_link",
+      "adjacent_posts_rel_link_wp_head",
+      "wp_shortlink_wp_head"
+    ],
+
+    // Removes these headers
+    "headers":[
+      "X-Pingback"
+    ]
+  },
 
   // Menu options
   "menu": {

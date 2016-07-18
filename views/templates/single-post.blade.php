@@ -1,8 +1,10 @@
 @extends('layouts/page')
 
 @section('main')
-
     <article id="post-{{$post->id}}" class="post-excerpt {{$post->cssClass()}}">
+        @if($post->thumbnail())
+            <img src="{{ $post->thumbnail()->src('post-header') }}" style="width: 100%; height: auto;"> 
+        @endif
         <header class="entry-header">
             <h2 class="entry-title">
                 <a href="{{$post->permalink()}}" rel="bookmark">{{$post->title()}}</a>
